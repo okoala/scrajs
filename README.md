@@ -1,2 +1,1 @@
-# egg-crawler
-simple crawler for egg
+# A scalable web crawler framework for Node.js

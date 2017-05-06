@@ -1,0 +1,28 @@
+{
+  "lerna": "2.0.0-rc.4",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "changelog": {
+    "repo": "babel/babel",
+    "labels": {
+      "tag: spec compliancy": ":eyeglasses: Spec Compliancy",
+      "tag: breaking change": ":boom: Breaking Change",
+      "tag: new feature": ":rocket: New Feature",
+      "tag: bug fix": ":bug: Bug Fix",
+      "tag: polish": ":nail_care: Polish",
+      "tag: documentation": ":memo: Documentation",
+      "tag: internal": ":house: Internal"
+    }
+  },
+  "cacheDir": ".changelog",
+  "commands": {
+    "publish": {
+      "ignore": [
+        "*.md",
+        "test/**"
+      ]
+    }
+  }
+}
