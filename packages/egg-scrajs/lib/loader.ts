@@ -3,7 +3,7 @@ const MODELS = Symbol('loadedModels');
 export default (app) => {
   const crawlerRoot = app.config.crawler.root;
 
-  Object.defineProperty(app, 'crawler', {
+  Object.defineProperty(app, 'scrajs', {
     value:
   });
 

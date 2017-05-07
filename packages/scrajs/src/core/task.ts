@@ -1,6 +1,6 @@
-interface Task {
+interface ITask {
   getUUID(): string;
   getSite(): string;
 }
 
-export default Task;
+export default ITask;

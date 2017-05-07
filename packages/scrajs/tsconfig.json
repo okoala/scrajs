@@ -20,15 +20,7 @@
     "inlineSourceMap": true,
     "importHelpers": true
   },
-  "include": [
-    "app.ts",
-    "agent.ts",
-    "app/**/*",
-    "config/**/*",
-    "test/**/*.ts"
-  ],
   "exclude": [
-    "app/public",
-    "app/views"
+    "node_modules"
   ]
 }
