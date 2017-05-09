@@ -1,6 +1,6 @@
-import Task from '../task';
+import { ITask } from '../task';
 
 export interface IDownloader {
-  download(request: Request, task: Task);
+  download(request: Request, task: ITask);
   setThread(threadNum: number);
 }

@@ -1,6 +1,12 @@
-import ITask from "./task";
+import { ITask } from "./task";
+import { IDownloader } from './downloader/downloader';
+import { IPipeline } from './pipeline/pipeline';
 
 export default class Spider implements ITask {
+  protected downloader: IDownloader;
+  protected pipelines: IPipeline[] = new Array<IPipeline>();
+
+
   protected uuid: string;
   protected site: string;
   /**
