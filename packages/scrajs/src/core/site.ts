@@ -1,5 +1,5 @@
 import * as http from 'http';
-import { hashCode } from './utils';
+import { hashCode, isEqual } from './utils';
 
 export default class Site {
   private domain: string;
@@ -305,7 +305,7 @@ export default class Site {
     return this.retrySleepTime;
   }
 
-  public isEquals(o: object) {
+  public equals(o: object) {
     if (this === o) return true;
 
     const site: Site = <Site>o;
@@ -314,6 +314,38 @@ export default class Site {
     if (this.retryTimes != site.retryTimes) return false;
     if (this.sleepTime != site.sleepTime) return false;
     if (this.timeout != site.timeout) return false;
+    if (this.acceptStatCode != null
+      ? !isEqual(this.acceptStatCode, site.acceptStatCode)
+      : site.acceptStatCode != null) {
+      return false;
+    }
+    if (this.charset != null
+      ? !isEqual(this.charset, site.charset)
+      : site.charset != null) {
+      return false;
+    }
+    if (this.defaultCookies != null
+      ? !isEqual(this.defaultCookies, site.defaultCookies)
+      : site.defaultCookies != null) {
+      return false;
+    }
+    if (this.domain != null
+      ? !isEqual(this.domain, site.domain)
+      : site.domain != null) {
+      return false;
+    }
+    if (this.headers != null
+      ? !isEqual(this.headers, site.headers)
+      : site.headers != null) {
+      return false;
+    }
+    if (this.userAgent != null
+      ? !isEqual(this.userAgent, site.userAgent)
+      : site.userAgent != null) {
+      return false;
+    }
+
+    return true;
   }
 
   /**
